@@ -12,7 +12,7 @@ router.get('/', function (req, res) {
             client.query('Select * FROM todo;', function (errorMakingQuery, result) {
                 done();//putting the connection back in the pool
                 if (errorMakingQuery) {
-                    console.log('there was an error Making the query(syntax error most likly:', errorMakingQuery);
+                    console.log('there was an error Making the query(syntax error most likly):', errorMakingQuery);
                     res.sendStatus(500);
                 } else {
                     res.send(result.rows);
