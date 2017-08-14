@@ -1,21 +1,40 @@
 <!DOCTYPE html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>To Do List(weekend challenge 3)</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <script src="vendors/jquery.js"></script>
-        <script src="scripts/client.js"></script>
-        <link rel='stylesheet' type="text/css" href='views/styles.css'>
-    </head>
-    <body>
-        <h1>To Do List<br><span>(weekend challenge 3)</span></h1>
-        <button id='createTask'>Create New Task</button>
-        <div id='toDo'>
-            <h2> To Do </h2>
-            <ol id='toDoItem'>
-                </ol>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>To Do List(weekend challenge 3)</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="vendors/jquery.js"></script>
+    <script src="scripts/client.js"></script>
+    <link rel='stylesheet' type="text/css" href='views/styles.css'>
+</head>
+
+<body>
+    <h1 id='title'>To Do List<br><span>(weekend challenge 3)</span></h1>
+    <button id='createTask'>Create New Task</button>
+    <div id='toDo'>
+        <h2> To Do </h2>
+        <div id='table'>
+            <table>
+                <thead>
+          <tr>
+            <th id='complete'>Complete</th>
+            <th id= 'tasks'>Tasks</th>
+            <th id= 'delete'>Delete</th>
+          </tr>
+                </thead>
+                <tbody id="toDoItem">
+                    <tr>
+                        <td>
+
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
-    </body>
+    </div>
+</body>
+
 </html>

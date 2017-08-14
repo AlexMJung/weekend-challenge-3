@@ -1,4 +1,18 @@
+body{
+    background-image: url(notepad.jpg);
+    background-color: white;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+#title{
+    display: flex;
+    justify-content: center;
+}
+
 #createTask {
+    display: flex;
+    justify-content: center;
+
     background-color: green;
     color: white;
     height: 24px;
@@ -6,19 +20,50 @@
     font-size: 16px;
     padding-bottom: 2px;
     border-radius: 5px;
-};
-button:hover{
-    background-color: grey;
+    margin: 0 0 0 240px;
+}
+#toDo{
+    display: flex;
+    justify-content: center;
+}
+#table{
+    display: flex;
+    justify-content: center
 }
 
 h2{
     font-size: 36px;
+        display: flex;
+    justify-content: center;
 }
 
 span{
     font-size:18px;
+        display: flex;
+    justify-content: center;
+}
+
+li .toDo{
+    font-size: 24px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+li .complete{
+    height: 24px;
+    width: 36px;
+    background: #ffff70;
+}
+
+li .delete{
+    height: 24px;
+    width: 36px;
+    background: red;
 }
 
 h1{
     font-size:50px;
 }
+
+ .true{   
+     text-decoration: line-through;
+ }

@@ -3,7 +3,7 @@ var bodyParser = require('body-parser');
 var app = express();
 var tasks = require('./routes/tasks.js');
 
-var port = 5500;
+var port = 5000;
 
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static('./public'));
