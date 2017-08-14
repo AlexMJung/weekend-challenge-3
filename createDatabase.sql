@@ -1,11 +1,14 @@
 CREATE TABLE todo (
 id serial primary key,
-task VARCHAR(250)
+task VARCHAR(100),
+complete Boolean
 );
 
-INSERT INTO todo (task)
-VALUES ('connect to database'),
-('test pulling items from database(get)'),
-('add items to database(post)'),
-('remove items from database(delete)'),
-('change class of items in database(put)');
+SELECT * FROM todo;
+
+INSERT INTO todo (task, complete)
+VALUES ('connect to database', 'false'),
+('test pulling items from database(get)', 'false'),
+('add items to database(post)','false'),
+('remove items from database(delete)','false'),
+('change class of items in database(put)', false);
