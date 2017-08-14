@@ -1,17 +1,20 @@
 body{
-    background-image: url(notepad.jpg);
-    background-color: white;
+    color: white;
+}
+
+#background{
+    background-image: url(post-it-notes.jpg);
+    background-color: black;
     background-repeat: no-repeat;
     background-size: 100%;
+    opacity:.8;
+    height: 1000px;
 }
+
 #title{
-    display: flex;
-    justify-content: center;
 }
 
 #createTask {
-    display: flex;
-    justify-content: center;
 
     background-color: green;
     color: white;
@@ -20,44 +23,20 @@ body{
     font-size: 16px;
     padding-bottom: 2px;
     border-radius: 5px;
-    margin: 0 0 0 240px;
-}
-#toDo{
-    display: flex;
-    justify-content: center;
-}
-#table{
-    display: flex;
-    justify-content: center
+  
 }
 
 h2{
     font-size: 36px;
-        display: flex;
-    justify-content: center;
 }
 
 span{
+    margin: -15px 0 0 0; 
     font-size:18px;
-        display: flex;
-    justify-content: center;
 }
 
-li .toDo{
-    font-size: 24px;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-li .complete{
-    height: 24px;
-    width: 36px;
-    background: #ffff70;
-}
-
-li .delete{
-    height: 24px;
-    width: 36px;
-    background: red;
+.text{
+    max-block-size: 100px;
 }
 
 h1{
@@ -67,3 +46,16 @@ h1{
  .true{   
      text-decoration: line-through;
  }
+
+.delete{
+    color: white;
+    background-color: red;
+    border-radius: 5px;
+}
+
+
+.complete{
+    color: black;
+    background-color: yellow;
+    border-radius: 5px;
+}

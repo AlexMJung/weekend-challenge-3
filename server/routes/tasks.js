@@ -9,7 +9,7 @@ router.get('/', function (req, res) {
             console.log('Error connecting to database', errorConnectingToDatabase);
             res.sendStatus(500);
         } else {
-            client.query('Select * FROM todo;', function (errorMakingQuery, result) {
+            client.query('Select * FROM todo ORDER by complete ASC;', function (errorMakingQuery, result) {
                 done();//putting the connection back in the pool
                 if (errorMakingQuery) {
                     console.log('there was an error Making the query(syntax error most likly):', errorMakingQuery);

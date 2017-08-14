@@ -5,7 +5,7 @@ $(document).ready(function () {
     $('#createTask').on('click', function () {
         console.log('button clicked, woot!!!');
         var newTask = {
-            task: prompt("what\'s on deck?"),
+            task: prompt("What is the plan?"),
             complete: false
         };
         console.log(newTask.task);
@@ -52,6 +52,7 @@ $(document).ready(function () {
 
     //removes a task completly when delete button is clicked
     $('#toDo').on('click', '.delete', function () {
+        if (confirm("are you sure?")){
         //console.log('delete button was clicked, woop woop!!!');
         var deleteId = $(this).parent().parent().data().id;
         console.log('deleteId =', deleteId);
@@ -64,6 +65,7 @@ $(document).ready(function () {
                 getTasks();
             }//end of success
         });//ajax
+        }
     });//end of on click function
 
 
@@ -80,8 +82,9 @@ function getTasks() {
             for (var i = 0; i < response.length; i++) {
                 var task = response[i];
                 $('#toDoItem').append('<tr data-id=' + task.id + ' class =' + task.complete + '>' +
-                '<td><button class="complete" value="' + task.complete + '">Done!</button></td>' +        '<td>' + task.task + '</td>' +
-                '<td><button class="delete">delete</button>' +
+                '<td><button class="complete" value="' + task.complete + '">Done!</button></td>' +        
+                '<td class="text">' + task.task + '</td>' +
+                '<td><button class="delete">Delete?</button>' +
                     '</td></tr>');
             }//end of for loop
         }//end of response
